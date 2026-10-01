@@ -1,0 +1,105 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Test - Thuy Duong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>DevOps Test</h1>
+            <p>CI/CD Demo Website</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <h2>Hello, Thuy Duong! 👋</h2>
+            <p>
+                This website is deployed automatically using
+                GitHub and Jenkins.
+            </p>
+
+            <button onclick="showMessage()">
+                Test Website
+            </button>
+
+            <p id="message"></p>
+        </section>
+
+        <section class="pipeline">
+
+            <h2>CI/CD Pipeline</h2>
+
+            <div class="pipeline-container">
+
+                <div class="step">
+                    <div class="icon">1</div>
+                    <h3>GitHub</h3>
+                    <p>Push Code</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <div class="icon">2</div>
+                    <h3>Jenkins</h3>
+                    <p>Build</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <div class="icon">3</div>
+                    <h3>Deploy</h3>
+                    <p>Website</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <div class="icon">4</div>
+                    <h3>Telegram</h3>
+                    <p>Notification</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="info">
+
+            <div class="card">
+                <h3>Project</h3>
+                <p>devops-test-thuyduong</p>
+            </div>
+
+            <div class="card">
+                <h3>Branch</h3>
+                <p>main</p>
+            </div>
+
+            <div class="card">
+                <h3>Status</h3>
+                <p class="success">Ready for CI/CD</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>DevOps Test Project - Thuy Duong</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
