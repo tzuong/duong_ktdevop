@@ -14,14 +14,14 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 echo '=== INSTALL DEPENDENCIES ==='
-                bat 'npm install'
+                sh 'npm install'
             }
         }
 
         stage('Build') {
             steps {
                 echo '=== BUILD PROJECT ==='
-                bat 'npm run build'
+                sh 'npm run build'
             }
         }
 
@@ -29,12 +29,10 @@ pipeline {
             steps {
                 echo '=== DEPLOY PROJECT ==='
 
-                bat '''
-                    if not exist "C:\\inetpub\\wwwroot\\devops-test-thuyduong" mkdir "C:\\inetpub\\wwwroot\\devops-test-thuyduong"
-                '''
-
-                bat '''
-                    xcopy /E /Y /I "dist\\*" "C:\\inetpub\\wwwroot\\devops-test-thuyduong\\"
+                sh '''
+                    rm -rf deploy
+                    mkdir -p deploy
+                    cp -r dist/* deploy/
                 '''
 
                 echo '=== DEPLOY SUCCESS ==='
